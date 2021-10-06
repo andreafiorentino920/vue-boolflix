@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       films: [],
-      series:[]
+      series:[],
     }
   },
   methods: {
@@ -44,12 +44,10 @@ export default {
       .then( (response) => {
         this.series = response.data.results
       });
-
     }
   }
 }
 </script>
-
 <style lang="scss">
 @import "./assets/style/common";
 </style>

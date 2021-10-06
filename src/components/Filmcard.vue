@@ -1,7 +1,10 @@
 <template>
   <div class="film-card">
     <div>
-        <p >Titolo: {{info.title || info.name}}</p>
+        <div class="">
+            <img :src="`https://image.tmdb.org/t/p/w154${info.poster_path}`" alt="">
+        </div>
+        <p>Titolo: {{info.title || info.name}}</p>
         <p>Titolo originale: {{info.original_title || info.original_name}}</p>
         <div>
             <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >
