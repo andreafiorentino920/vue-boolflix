@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header @searching="searchFilm"/>
-    <Films :films="films" :series="series"/>
-
+    <Films :films="films"/>
+    <Films :series="series"/>
   </div>
 </template>
 
