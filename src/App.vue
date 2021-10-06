@@ -2,6 +2,7 @@
   <div>
     <Header @searching="searchFilm"/>
     <Films :films="films" :series="series"/>
+
   </div>
 </template>
 

@@ -5,9 +5,10 @@
 			<Filmcard :film="film"/>
 		</li>
 	</ul>
-    <ul>
-		<li v-for="(serie,index) in series" :key="index">
-            <Filmcard :serie="serie"/>
+	<ul>
+		<li>
+			<li v-for="(serie, index) in series" :key="index">
+			<Filmcard :serie="serie"/>
 		</li>
 	</ul>
   </div>
@@ -17,12 +18,12 @@
 import Filmcard from './Filmcard.vue';
 export default {
 	name: "Films",
-	props: ['films, series'],
+	props: ['films', "serie"],
 	components: {
 		Filmcard
 	}
 }
 </script>
 
-<style>
+<style lang="scss">
 </style>
