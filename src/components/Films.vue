@@ -2,13 +2,13 @@
   <div class="container d-flex justify-content-center">
 	<ul>
 		<li v-for="(film, index) in films" :key="index">
-			<Filmcard :film="film"/>
-		</li>
-		<ul>
-		<li v-for="(serie, index) in series" :key="index">
-			<Filmcard :serie="serie"/>
+			<Filmcard :info="film"/>
 		</li>
 	</ul>
+	<ul>
+		<li v-for="(serie, index) in series" :key="index">
+			<Filmcard :info="serie"/>
+		</li>
 	</ul>
   </div>
 </template>
