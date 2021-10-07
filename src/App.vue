@@ -1,9 +1,17 @@
 <template>
   <div>
     <Header @searching="searchFilm"/>
-    <div class="container-card d-flex justify-content-center">
-      <Films v-if="films !== undefined" :films="films"/>
-      <Films v-if="series !== undefined" :series="series"/> 
+    <div class="container-card">
+      <div>
+        <h3>FILM BOOLFLIX</h3>
+        <Films v-if="films !== undefined" :films="films"/>
+      </div>
+      <div>
+        <h3>SERIE TV BOOLFLIX</h3>
+        <Films v-if="series !== undefined" :series="series"/> 
+      </div>
+
+      
     </div>
   </div>
 </template>
@@ -58,6 +66,11 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  h3{
+    margin:40px 0 10px 130px ;
+    color: white;
+  }
 }
 </style>
          

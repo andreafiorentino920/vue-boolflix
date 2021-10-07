@@ -11,6 +11,9 @@
 			<button class="reset" @click.prevent="reset()">
 				<i class="far fa-trash-alt"></i>
 			</button>
+		</div>
+		<div class="utente-container d-flex align-items-center">
+			<i class="fas fa-bell bell"></i>
 			<span class="utente"><img class="utente-img" src="../assets/avatar.png" alt=""><i class="fas fa-sort-down"></i></span>Andrea
 		</div>
 	</header>
@@ -42,23 +45,33 @@ header{
 	.buttons{
 		color: white;
 		margin-right: 20px;
-		.utente{
-
-			i{
-				font-size: 20px;
-				margin:0 5px 0 15px;
-			}
-		}
+		
 		.reset, .cerca{
 			width: 60px;
 			background-color: black;
 			color: white;
 		}
+
+		input{
+			width: 500px;
+		}
+	}
+	.utente-container{
+		margin-right: 25px;
+		color: white;
+			i{
+				font-size: 20px;
+				margin:0 5px 0 15px;
+			}
 		img{
 			margin-left: 25px;
 			width: 50px;
 		}
-}
+		.bell{
+			margin-left: 25px;
+			font-size: 30px;
+		}
+	}	
 }
 
 </style>
