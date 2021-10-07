@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <h3>&#11088;</h3> -->
     <Header @searching="searchFilm"/>
     <Films :films="films"/>
     <Films :series="series"/>

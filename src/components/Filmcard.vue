@@ -9,10 +9,14 @@
         <div>
             <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >
         </div>
-        <p>Voto: {{info.vote_average}}</p>
+        <div>
+            <i v-for="n in 5" :key="n"
+            class="fa-star"
+            :class="(n <= vote(info.vote_average)) ? 'fas' : 'far'"
+            ></i>
+        </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -26,8 +30,13 @@ export default {
             } else {
                 return "https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png";
             }
+        },
+        vote(num){
+            num = (num/2);
+            return num = Math.ceil(num)
         }
     },
+
      data() {
         return {
             noflag : ['gu', 'ii', 'ik', 'iu', 'jv', 'kg', 'ki', 'kj', 'ml', 'mr', 'nb', 'nd', 'ng', 'nn', 'nr', 'pi', 'ps', 'sa', 'sw', 'te', 'tl', 'tw'],
@@ -38,5 +47,8 @@ export default {
 <style lang="scss">
 .flag-img{
     width: 40px;
+}
+i{
+    color: gold;
 }
 </style>
