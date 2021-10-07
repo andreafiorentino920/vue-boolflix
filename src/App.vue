@@ -2,10 +2,9 @@
   <div>
     <Header @searching="searchFilm"/>
     <div class="container-card d-flex justify-content-center">
-      <Films :films="films"/>
-      <Films :series="series"/> 
+      <Films v-if="films !== undefined" :films="films"/>
+      <Films v-if="series !== undefined" :series="series"/> 
     </div>
-
   </div>
 </template>
 
