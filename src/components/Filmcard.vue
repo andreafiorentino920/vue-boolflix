@@ -3,20 +3,20 @@
     <div class="info">
         <ul>
             <li>
-                Titolo: {{info.title || info.name}}
+                Titolo: {{info.title || info.name}};
             </li>
             <li>
-                Titolo originale: {{info.original_title || info.original_name}}
+                Titolo originale: {{info.original_title || info.original_name}};
             </li>
             <li>
-                <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >
+                <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >;
             </li>
             <li class="star">
                 Voto: 
-            <i v-for="n in 5" :key="n" class="fa-star" :class="(n <= vote(info.vote_average)) ? 'fas' : 'far'"> </i>
+            <i v-for="n in 5" :key="n" class="fa-star" :class="(n <= vote(info.vote_average)) ? 'fas' : 'far'"> </i>;
             </li>
             <li>
-                Overview: {{info.overview}}
+                Overview: {{info.overview}};
             </li>
         </ul>
     </div>
@@ -72,6 +72,7 @@ export default {
         padding: 20px 15px 0 0;
         li{
             list-style-type: none;
+            margin-bottom: 5px;
         }
     }
     
