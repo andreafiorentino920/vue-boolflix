@@ -1,22 +1,21 @@
 <template>
-  <div class="film-card">
+<div :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w300'+info.poster_path+')'}" class="film-card">
+    <div class="info">
+    <p>Titolo: {{info.title || info.name}}</p>
+    <p>Titolo originale: {{info.original_title || info.original_name}}</p>
     <div>
-        <div class="">
-            <img :src="`https://image.tmdb.org/t/p/w154${info.poster_path}`" alt="">
-        </div>
-        <p>Titolo: {{info.title || info.name}}</p>
-        <p>Titolo originale: {{info.original_title || info.original_name}}</p>
-        <div>
-            <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >
-        </div>
-        <div>
-            <i v-for="n in 5" :key="n"
-            class="fa-star"
-            :class="(n <= vote(info.vote_average)) ? 'fas' : 'far'"
-            ></i>
-        </div>
+        <span>Language:</span> <img :src="flag(info.original_language)" class="flag-img" >
     </div>
-  </div>
+    <div class="star">
+        Voto: 
+        <i v-for="n in 5" :key="n"
+        class="fa-star"
+        :class="(n <= vote(info.vote_average)) ? 'fas' : 'far'"
+        > </i>
+    </div>
+    <p>Overview: {{info.overview}}</p>
+    </div>
+</div>
 </template>
 
 <script>
@@ -45,10 +44,30 @@ export default {
 }
 </script>
 <style lang="scss">
-.flag-img{
+.film-card{
+    color: white;
+    height: 450px;
+    overflow-y: scroll;
+
+    .info{
+        height: 100%;
+        display: none;
+        
+    }
+    .info:hover{
+        display: block;
+        background-color: black;
+    }
+    .flag-img{
     width: 40px;
+
+    .star{
+        i{
+        color: gold;
+        }
+    }
+    }
 }
-i{
-    color: gold;
-}
+
+
 </style>

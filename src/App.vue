@@ -1,9 +1,11 @@
 <template>
   <div>
-    <!-- <h3>&#11088;</h3> -->
     <Header @searching="searchFilm"/>
-    <Films :films="films"/>
-    <Films :series="series"/>
+    <div class="container-card d-flex justify-content-center">
+      <Films :films="films"/>
+      <Films :series="series"/> 
+    </div>
+
   </div>
 </template>
 
@@ -51,5 +53,12 @@ export default {
 </script>
 <style lang="scss">
 @import "./assets/style/common";
+.container-card{
+  height: 100%;
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 </style>
          
