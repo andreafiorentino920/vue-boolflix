@@ -3,15 +3,8 @@
     <Header @searching="searchFilm"/>
     <div class="container-card">
       <div>
-        <h3>FILM BOOLFLIX</h3>
-        <Films v-if="films !== undefined" :films="films"/>
+        <Films :films="films" :series="series"/>
       </div>
-      <div>
-        <h3>SERIE TV BOOLFLIX</h3>
-        <Films v-if="series !== undefined" :series="series"/> 
-      </div>
-
-      
     </div>
   </div>
 </template>
@@ -62,7 +55,6 @@ export default {
 @import "./assets/style/common";
 .container-card{
   height: 100%;
-  background-color: #1b1b1b;
   display: flex;
   justify-content: center;
   flex-direction: column;

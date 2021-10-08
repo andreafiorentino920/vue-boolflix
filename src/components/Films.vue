@@ -29,11 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-films{
-	height: 2600px;
-}
 .films{
-	
 	li{
 		margin-top: 30px;
 		margin-bottom: 30px;
